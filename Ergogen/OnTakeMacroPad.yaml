@@ -1,0 +1,110 @@
+points:
+  key:
+    padding: u
+    tags:
+      1u: true
+    footprints:
+      mx_hotswap:
+        type: mx
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+        nets:
+          from: =colrow
+          to: =column_net
+      diode:
+        type: diode
+        nets:
+          from: =colrow
+          to: =row_net
+        anchor:
+          shift: [0, -5]
+        
+  zones:
+    main:
+      columns:
+        c1:
+          stagger: 5
+          key:
+            column_net: P20
+        c2:
+          stagger: 10
+          key:
+            column_net: P19
+        c3:
+          stagger: -5
+          key:
+            column_net: P18
+        c4:
+          stagger: -10
+          key:
+            column_net: P15
+      
+      rows:
+        r1:
+          row_net: P6
+        r2:
+          row_net: P5
+        r3:
+          row_net: P4
+        r4:
+          row_net: P3
+
+    3k:
+      anchor:
+        ref: main_c4_r1
+        shift: [0,-30]
+        rotate: 10
+
+      columns:
+        c5:
+          key:
+            column_net: P19
+        c6:
+          key:
+            column_net: P18
+        c7:
+          key:
+            column_net: P15
+      rows:
+        r5:
+          row_net: P2
+
+outlines:
+  exports:
+    raw:
+      - type: keys
+        side: left
+        size: [u,u]
+      - type: rectangle
+        size: [60,22]
+        anchor:
+          rotate: 10
+          ref: main_c4_r1
+          shift: [-46.5,-32]
+    cutout:
+      - type: outline
+        name: raw
+        fillet: 2
+    keycap_outlines:
+      - type: keys
+        side: left
+        size: [u,u]
+    preview:
+      [keycap_outlines]
+
+pcbs:
+  macropad:
+    outlines:
+      edge:
+        outline: cutout
+        layer: Edge.Cuts
+    footprints:
+      mcu:
+        type: promicro
+        anchor:
+          rotate: 10
+          ref: main_c4_r1
+          shift: [-46.5+17.87,-21+3.29]
+          
