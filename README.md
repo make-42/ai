@@ -3,6 +3,8 @@
 ![ai](https://i.imgur.com/Hu2xkrz.png)
 ![ai](https://i.imgur.com/4l6BzRh.png)
 
+[Youtube video documenting the design process](https://youtu.be/T9ol78Huxd8)
+
 This is a small open source 5x4-1 macropad powered by QMK
 
 * Keyboard Maintainer: [Louis Dalibard](https://github.com/make42)
