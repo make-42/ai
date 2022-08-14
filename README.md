@@ -1,5 +1,6 @@
 # ai
-
+![ai](https://i.imgur.com/1awiWP2.png)
+![ai](https://i.imgur.com/Hu2xkrz.png)
 ![ai](https://i.imgur.com/4l6BzRh.png)
 
 This is a small open source 5x4-1 macropad powered by QMK
